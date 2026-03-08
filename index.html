@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ricardo Zagorski | Odontologia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #F1F5F9; display: flex; justify-content: center; align-items: flex-start; padding: 20px; min-height: 100vh; }
+        
+        .container { max-width: 450px; width: 100%; background: #ffffff; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); overflow: hidden; }
+
+        .perfil { background-color: #0891B2; padding: 40px 20px; color: #ffffff; text-align: center; }
+        .foto-perfil { width: 160px; height: 160px; margin: 0 auto 15px; border-radius: 50%; border: 5px solid #ffffff; object-fit: cover; display: block; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: 0.5s; }
+        
+        /* Efeito de zoom na foto do perfil */
+        .foto-perfil:hover { transform: scale(1.1); }
+
+        .perfil h1 { font-size: 24px; margin-bottom: 5px; font-weight: 700; }
+        .especialidade { font-size: 14px; opacity: 0.9; margin-bottom: 15px; font-weight: 600; text-align: center;}
+
+        .conteudo { padding: 25px 20px; }
+
+        .botoes-acao { display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px; }
+        .btn { display: block; text-decoration: none; padding: 16px; border-radius: 14px; font-weight: 700; font-size: 15px; transition: 0.3s; text-align: center; }
+        .btn-wpp { background: #0891B2; color: #fff; box-shadow: 0 4px 10px rgba(8, 145, 178, 0.3); }
+        .btn-wpp:hover { background: #0e7490; transform: translateY(-3px); box-shadow: 0 6px 15px rgba(8, 145, 178, 0.4); }
+        .btn-mapa { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; margin-top: 5px;}
+        .btn-mapa:hover { background: #e2e8f0; }
+
+        /* COMODIDADES */
+        .comodidades-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 30px 0; text-align: left; }
+        .comodidade-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #475569; background: #F8FAFC; padding: 10px; border-radius: 12px; border: 1px solid #E2E8F0; transition: 0.3s; }
+        .comodidade-item:hover { background: #ffffff; border-color: #0891B2; transform: translateY(-2px); }
+
+        /* SEÇÕES E IMAGENS COM ZOOM */
+        .secao-titulo { color: #0891B2; font-size: 18px; margin-bottom: 15px; text-align: left; border-top: 1px solid #eee; padding-top: 25px; }
+        
+        /* Container para a imagem não "vazar" ao dar zoom */
+        .img-wrapper { width: 100%; border-radius: 16px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        .img-responsiva { 
+            width: 100%; 
+            display: block; 
+            transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animação elegante */
+        }
+        
+        /* Efeito ao passar o mouse na imagem */
+        .img-wrapper:hover .img-responsiva { 
+            transform: scale(1.1); 
+            filter: brightness(1.1); /* Dá um brilho extra */
+        }
+
+        .depoimento { background: #fffbeb; padding: 15px; border-radius: 16px; border: 1px solid #fef3c7; margin: 25px 0; font-style: italic; text-align: center; }
+        footer { font-size: 11px; color: #94A3B8; padding: 20px; border-top: 1px solid #F1F5F9; text-align: center; }
+
+        .info-lateral { display: none; }
+        @media (min-width: 1000px) {
+            body { align-items: center; gap: 50px; }
+            .info-lateral { display: block; width: 280px; background: white; padding: 30px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 6px solid #0891B2; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="perfil">
+            <img src="Imagens/Ricardo1.jpeg" alt="Dr. Ricardo Zagorski" class="foto-perfil">
+            <h1>Dr. Ricardo Zagorski</h1>
+            <p class="especialidade">Odontologia Estética e Reabilitação</p>
+        </header>
+
+        <div class="conteudo">
+            <div class="botoes-acao">
+                <a href="https://wa.me/5542999999999" class="btn btn-wpp">📅 Agendar Minha Avaliação</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+XV+de+Novembro+6968+Guarapuava" target="_blank" class="btn btn-mapa">📍 Localização no Mapa</a>
+            </div>
+
+            <h2 class="secao-titulo" style="border:none; padding:0;">Comodidades</h2>
+            <div class="comodidades-container">
+                <div class="comodidade-item"><span>📶</span> Wi-fi Grátis</div>
+                <div class="comodidade-item"><span>☕</span> Café e Água</div>
+                <div class="comodidade-item"><span>❄️</span> Ar Climatizado</div>
+                <div class="comodidade-item"><span>♿</span> Acessibilidade</div>
+            </div>
+
+            <section class="secao-historia">
+                <h2 class="secao-titulo">Sobre o Dr. Ricardo</h2>
+                <div class="img-wrapper">
+                    <img src="Imagens/Ricardo2.jpeg" alt="Dr. Ricardo em atendimento" class="img-responsiva">
+                </div>
+                <p style="font-size: 14px; color: #475569; line-height: 1.6;">
+                    Com mais de X anos de experiência em Guarapuava, o Dr. Ricardo Zagorski dedica sua carreira a transformar sorrisos através de uma odontologia moderna e humanizada.
+                </p>
+            </section>
+
+            <section class="galeria">
+                <h2 class="secao-titulo">O Consultório</h2>
+                <div class="img-wrapper">
+                    <img src="Imagens/Equipe.jpeg" alt="Equipe Dental Life" class="img-responsiva">
+                </div>
+                <div class="img-wrapper">
+                    <img src="Imagens/Serviços1.jpeg" alt="Nossos Serviços" class="img-responsiva">
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Rua XV de Novembro, 6968 - Guarapuava/PR</p>
+            <p style="margin-top: 5px;">© 2026 Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <aside class="info-lateral">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 15px;"><span style="width: 8px; height: 8px; background: #22C55E; border-radius: 50%;"></span><strong style="color: #0f766e;">Aberto Agora</strong></div>
+        <p><strong>Clínica Dental Life</strong></p>
+        <p style="margin-top: 10px;">Segunda a Sexta:<br>08:00 - 18:00</p>
+    </aside>
+
+</body>
+</html>
